@@ -3,7 +3,6 @@ from IPy import IP
 
 class MBHelper:
 
-	#rsid = array.array('B')
 	msg = ''
 	rsid = ''
 
@@ -94,7 +93,6 @@ class MBHelper:
 				self.msg += 'Response: ' + str(data) + '\n'
 				#parse response
 				#if the function matches the one sent we are all good
-				#print 'Response fcode: %s \t Requested fcode: %s' % (resp[7], options.function)
 				if (int(data[7]) == int(adu[7])):
 					connected_devices.append(str(ip) + ':' + str(sid))					
 				#If the function matches the one sent + 0x80 a positive response error code is detected

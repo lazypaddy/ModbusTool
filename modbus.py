@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Resources:
 http://www.simplymodbus.ca/TCP.htm
 https://itunes.apple.com/us/app/modbus-server-pro/id618058292?mt=8
-Mark Bristow (modscan.py)
+Kudos to Mark Bristow (modscan.py) for a lot of the fundamentals of this code
 """
 
 import socket
