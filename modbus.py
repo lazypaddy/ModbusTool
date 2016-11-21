@@ -37,16 +37,14 @@ import time
 
 def main():
 
-	p = optparse.OptionParser(	description=' Finds modbus devices in IP range and determines slave id.\nOutputs in ip:port <tab> sid format.',
-								prog='modscan',
-								version='modscan 0.1',
+	p = optparse.OptionParser(	description=' Modbus Command Line Utility.',
+								prog='modbus',
+								version='modbus 0.1',
 								usage = "usage: %prog [options] IPRange")
 	p.add_option('--port', '-p', type='int', dest="port", default=502, help='modbus port DEFAULT:502')
 	p.add_option('--timeout', '-t', type='int', dest="timeout", default=500, help='socket timeout (mills) DEFAULT:500')
-	p.add_option('--aggressive', '-a', action ='store_true', help='continues checking past first found SID')
 	p.add_option('--function', '-f', type='int', dest="function", default=17, help='MODBUS Function Code DEFAULT:17')
-	p.add_option('--data', type='string', dest="fdata", help='MODBUS Function Data.  Unicode escaped "\x00\x01"')
-	p.add_option('-v', '--verbose', action ='store_true', help='returns verbose output')
+	p.add_option('--data', type='string', dest="fdata", help='MODBUS Function Data.  String Data " 00 01"')
 	p.add_option('-d', '--debug', action ='store_true', help='returns extremely verbose output')
 	p.add_option('-c', '--continious', action ='store_true', help='Continuously read registers')
 	p.add_option('-s', '--sid', type='int',dest='sid', default=11, help='Optional - Set SID for Modbus Slave (default=11)')
