@@ -14,15 +14,13 @@ modbus.py -h
 Modbus Command Line Utility.
 
 Options:
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-  -p PORT, --port=PORT  modbus port DEFAULT:502
-  -t TIMEOUT, --timeout=TIMEOUT
-                        socket timeout (mills) DEFAULT:500
-  -f FUNCTION, --function=FUNCTION
-                        MODBUS Function Code DEFAULT:17
-  --data=FDATA          MODBUS Function Data.  String Data " 00 01"
-  -d, --debug           returns extremely verbose output
-  -c, --continious      Continuously read registers
-  -s SID, --sid=SID     Optional - Set SID for Modbus Slave (default=11)
-  -i, --investigate     Optional - Scan for live devices
+--version             				show program's version number and exit
+-h, --help            				show this help message and exit
+-p PORT, --port=PORT  				modbus port DEFAULT:502
+-t TIMEOUT, --timeout=TIMEOUT 		socket timeout (mills) DEFAULT:500
+-f FUNCTION, --function=FUNCTION	MODBUS Function Code DEFAULT:17
+--data=FDATA          MODBUS Function Data.  String Data " 00 01"
+-d, --debug           returns extremely verbose output
+-c, --continious      Continuously read registers
+-s SID, --sid=SID     Optional - Set SID for Modbus Slave (default=11)
+-i, --investigate     Optional - Scan for live devices
