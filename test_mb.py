@@ -13,6 +13,7 @@ class ModbusTestCase(unittest.TestCase):
 	def test_connection(self):
 		"""Test connection to 127.0.0.1 on port 1502"""
 		self.assertTrue(self.mb.mb_connect('127.0.0.1', 1502, 500))
+		self.mb.s.close()
 
 	def test_send_mb_data(self):
 		"""Test MB Send command to 127.0.0.1 on port 1502. Register 106 must equal a value of 12.
